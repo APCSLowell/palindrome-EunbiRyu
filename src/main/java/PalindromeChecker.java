@@ -38,6 +38,16 @@ public void tester()
 public boolean palindrome(String word)
 {
   //your code here
+  word = word.toLowerCase();
+  
+  String ans = "";
+  for(int i=0; i<word.length();i++){
+    if((Character.isLetter(word.charAt(i)))&&(word.substring(i,i+1).equals(" ")) == false){
+      ans += word.charAt(i);
+    }
+  }
+  word = ans;
+  
   String palindO = reverse(word);
   if(palindO.equals(word)){
     return true;}
